@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SOLÈN Perfumería — Catálogo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;0,700;0,900;1,400&family=Cormorant+Garamond:ital,wght@0,400;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --pearl:#F8F6F1;
+    --white:#FFFFFF;
+    --khaki:#DCD3C1;
+    --taupe:#A69C8D;
+    --cacao:#4D403A;
+    --leather:#232020;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:var(--pearl);
+    color:var(--cacao);
+    font-family:'Jost',sans-serif;
+    font-weight:300;
+  }
+  header{
+    background:var(--leather);
+    color:var(--pearl);
+    text-align:center;
+    padding:70px 20px 55px;
+  }
+  header .logo{
+    font-family:'Bodoni Moda', serif;
+    font-weight:700;
+    font-size:clamp(48px, 9vw, 96px);
+    letter-spacing:2px;
+    line-height:1;
+  }
+  header .tagline-brand{
+    font-family:'Jost', sans-serif;
+    font-weight:400;
+    letter-spacing:10px;
+    font-size:13px;
+    color:var(--taupe);
+    margin-top:10px;
+    text-transform:uppercase;
+  }
+  header .manifiesto{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-size:20px;
+    color:var(--khaki);
+    margin-top:26px;
+    letter-spacing:0.5px;
+  }
+  .draft-banner{
+    background:var(--taupe);
+    color:var(--leather);
+    text-align:center;
+    font-family:'Jost',sans-serif;
+    font-size:13px;
+    letter-spacing:1px;
+    padding:10px;
+    text-transform:uppercase;
+  }
+  main{max-width:1280px; margin:0 auto; padding:60px 24px 100px;}
+  .section-title{
+    font-family:'Bodoni Moda', serif;
+    font-weight:600;
+    font-size:clamp(28px,4vw,42px);
+    color:var(--cacao);
+    text-align:center;
+    margin-bottom:6px;
+  }
+  .section-sub{
+    text-align:center;
+    font-family:'Jost';
+    font-size:12px;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    color:var(--taupe);
+    margin-bottom:44px;
+  }
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(230px, 1fr));
+    gap:28px;
+    margin-bottom:90px;
+  }
+  .card{
+    background:var(--white);
+    border:1px solid var(--khaki);
+    display:flex;
+    flex-direction:column;
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .card:hover{ transform:translateY(-4px); box-shadow:0 14px 30px rgba(35,32,32,0.12); }
+  .card-img{
+    position:relative;
+    aspect-ratio:1/1.15;
+    background:var(--pearl);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    padding:18px;
+  }
+  .card-img img{
+    max-width:100%;
+    max-height:100%;
+    object-fit:contain;
+  }
+  .tag-genero{
+    position:absolute;
+    top:10px;
+    right:10px;
+    background:var(--leather);
+    color:var(--pearl);
+    font-size:10px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    padding:4px 9px;
+  }
+  .card-body{ padding:18px 18px 22px; display:flex; flex-direction:column; gap:6px; flex:1; }
+  .marca{
+    font-size:11px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:var(--taupe);
+  }
+  .nombre{
+    font-family:'Bodoni Moda', serif;
+    font-weight:600;
+    font-size:19px;
+    color:var(--leather);
+    line-height:1.2;
+  }
+  .meta{ font-size:12px; color:var(--cacao); opacity:0.7; margin-bottom:6px; }
+  .placeholder{
+    border:1px dashed var(--khaki);
+    color:#9c9186;
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-size:13px;
+    padding:8px 10px;
+    background:#FCFBF8;
+  }
+  .precio-box{
+    margin-top:8px;
+    border:1px solid var(--cacao);
+    color:var(--cacao);
+    font-family:'Bodoni Moda', serif;
+    font-weight:600;
+    font-size:14px;
+    text-align:center;
+    padding:8px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+  }
+  footer{
+    background:var(--leather);
+    color:var(--taupe);
+    text-align:center;
+    padding:34px;
+    font-size:12px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+  }
+</style>
+</head>
+<body>
+
+<div class="draft-banner">Borrador de diseño — faltan descripción, notas olfativas y precios</div>
+
+<header>
+  <div class="logo">SOLÈN</div>
+  <div class="tagline-brand">Perfumería</div>
+  <div class="manifiesto">&ldquo;Ser recordado sin necesidad de hablar&rdquo;</div>
+</header>
+
+<main>
+  <section>
+    <h2 class="section-title">Colección de Diseñador</h2>
+    <p class="section-sub">Fragancias originales</p>
+    <div class="grid">
+        <article class="card">
+          <div class="card-img">
+            <img src="PERFUMERIA CATALOGO/Ariana Grande Cloud 100ML Edp L.png" alt="Ariana Grande Cloud" loading="lazy">
+            <span class="tag-genero">Dama</span>
+          </div>
+          <div class="card-body">
+            <p class="marca">Ariana Grande</p>
+            <h3 class="nombre">Cloud</h3>
+            <p class="meta">EDP &middot; 100 ML</p>
+            <div class="placeholder desc">Descripción aquí</div>
+            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <div class="precio-box">Precio</div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img">
+            <img src="PERFUMERIA CATALOGO/portrait Ariana Grande Cloud Pink 3.4 Edp L.png" alt="Ariana Grande Cloud Pink" loading="lazy">
+            <span class="tag-genero">Dama</span>
+          </div>
+          <div class="card-body">
+            <p class="marca">Ariana Grande</p>
+            <h3 class="nombre">Cloud Pink</h3>
+            <p class="meta">EDP &middot; 100 ML</p>
+            <div class="placeholder desc">Descripción aquí</div>
+            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <div class="precio-box">Precio</div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img">
+            <img src="PERFUMERIA CATALOGO/Burberry Her 100ML Edp L.png" alt="Burberry Her" loading="lazy">
+            <span class="tag-genero">Dama</span>
+          </div>
+          <div class="card-body">
+            <p class="marca">Burberry</p>
+            <h3 class="nombre">Her</h3>
+            <p class="meta">EDP &middot; 100 ML</p>
+            <div class="placeholder desc">Descripción aquí</div>
+            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <div class="precio-box">Precio</div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img">
+            <img src="PERFUMERIA CATALOGO/Burberry Her Intense 50ML Edp L.png" alt="Burberry Her Intense" loading="lazy">
+            <span class="tag-genero">Dama</span>
+          </div>
+          <div class="card-body">
+            <p class="marca">Burberry</p>
+            <h3 class="nombre">Her Intense</h3>
+            <p class="meta">EDP &middot; 50 ML</p>
+            <div class="placeholder desc">Descripción aquí</div>
+            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <div class="precio-box">Precio</div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img">
+            <img src="PERFUMERIA CATALOGO/Carolina Herrera 212 VIP Women 80ML Edp L.png" alt="Carolina Herrera 212 VIP Women" loading="lazy">
+            <span class="tag-genero">Dama</span>
+          </div>
+          <div class="card-body">
+            <p class="marca">Carolina Herrera</p>
+            <h3 class="nombre">212 VIP Women</h3>
+            <p class="meta">EDP &middot; 80 ML</p>
+            <div class="placeholder desc">Descripción aquí</div>
+            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <div class="precio-box">Precio</div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img">
+            <img src="PERFUMERIA CATALOGO/Carolina Herrera Good Girl 50ML Edp L.png" alt="Carolina Herrera Good Girl" loading="lazy">
+            <span class="tag-genero">Dama</span>
+          </div>
+          <div class="card-body">
+            <p class="marca">Carolina Herrera</p>
+            <h3 class="nombre">Good Girl</h3>
+            <p class="meta">EDP &middot; 50 ML</p>
+            <div class="placeholder desc">Descripción aquí</div>
+            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <div class="precio-box">Precio</div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img">
+            <img src="PERFUMERIA CATALOGO/Carolina Herrera Good Girl Blush 80ML Edp L.png" alt="Carolina Herrera Good Girl Blush" loading="lazy">
+            <span class="tag-genero">Dama</span>
+          </div>
+          <div class="card-body">
+            <p class="marca">Carolina Herrera</p>
+            <h3 class="nombre">Good Girl Blush</h3>
+            <p class="meta">EDP &middot; 80 ML</p>
+            <div class="placeholder desc">Descripción aquí</div>
+            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <div class="precio-box">Precio</div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img">
+            <img src="PERFUMERIA CATALOGO/Carolina Herrera La Bomba 30ML Edp L.png" alt="Carolina Herrera La Bomba" loading="lazy">
+            <span class="tag-genero">Dama</span>
+          </div>
+          <div class="card-body">
+            <p class="marca">Carolina Herrera</p>
+            <h3 class="nombre">La Bomba</h3>
+            <p class="meta">EDP &middot; 30 ML</p>
+            <div class="placeholder desc">Descripción aquí</div>
+            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <div class="precio-box">Precio</div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img">
+            <img src="PERFUMERIA CATALOGO/Carolina Herrera Very Good Girl 30ML Edp L.png" alt="Carolina Herrera Very Good Girl" loading="lazy">
+            <span class="tag-genero">Dama</span>
+          </div>
+          <div class="card-body">
+            <p class="marca">Carolina Herrera</p>
+            <h3 class="nombre">Very Good Girl</h3>
+            <p class="meta">EDP &middot; 30 ML</p>
+            <div class="placeholder desc">Descripción aquí</div>
+            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <div class="precio-box">Precio</div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img">
+            <img src="PERFUMERIA CATALOGO/Chanel Coco Mademoiselle 100ML Edp L.png" alt="Chanel Coco Mademoiselle" loading="lazy">
+            <span class="tag-genero">Dama</span>
+          </div>
+          <div class="card-body">
+            <p class="marca">Chanel</p>
+            <h3 class="nombre">Coco Mademoiselle</h3>
+            <p class="meta">EDP &middot; 100 ML</p>
+            <div class="placeholder desc">Descripción aquí</div>
+            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <div class="precio-box">Precio</div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img">
+            <img src="PERFUMERIA CATALOGO/Chanel N°5 100ML Edp L.png" alt="Chanel N°5" loading="lazy">
+            <span class="tag-genero">Dama</span>
+          </div>
+          <div class="card-body">
+            <p class="marca">Chanel</p>
+            <h3 class="nombre">N°5</h3>
+            <p class="meta">EDP &middot; 100 ML</p>
+            <div class="placeholder desc">Descripción aquí</div>
+            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <div class="precio-box">Precio</div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img">
+            <img src="PERFUMERIA CATALOGO/Creed Aventus For Her 25ML Edp L.png" alt="Creed Aventus For Her" loading="lazy">
+            <span class="tag-genero">Dama</span>
+          </div>
+          <div class="card-body">
+            <p class="marca">Creed</p>
+            <h3 class="nombre">Aventus For Her</h3>
+            <p class="meta">EDP &middot; 25 ML</p>
+            <div class="placeholder desc">Descripción aquí</div>
+            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <div class="precio-box">Precio</div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img">
+            <img src="PERFUMERIA CATALOGO/Dior J’adore 100ML Edp L.png" alt="Dior J'adore" loading="lazy">
+            <span class="tag-genero">Dama</span>
+          </div>
+          <div class="card-body">
+            <p class="marca">Dior</p>
+            <h3 class="nombre">J'adore</h3>
+            <p class="meta">EDP &middot; 100 ML</p>
+            <div class="placeholder desc">Descripción aquí</div>
+            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <div class="precio-box">Precio</div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img">
+            <img src="PERFUMERIA CATALOGO/Dolce & Gabbana Light Blue 100ML Edt L.png" alt="Dolce & Gabbana Light Blue" loading="lazy">
+            <span class="tag-genero">Dama</span>
+          </div>
+          <div class="card-body">
+            <p class="marca">Dolce & Gabbana</p>
+            <h3 class="nombre">Light Blue</h3>
+            <p class="meta">EDT &middot; 100 ML</p>
+            <div class="placeholder desc">Descripción aquí</div>
+            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <div class="precio-box">Precio</div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img">
+            <img src="PERFUMERIA CATALOGO/Giorgio Armani My Way 90ML Edp L.png" alt="Giorgio Armani My Way" loading="lazy">
+            <span class="tag-genero">Dama</span>
+          </div>
+          <div class="card-body">
+            <p class="marca">Giorgio Armani</p>
+            <h3 class="nombre">My Way</h3>
+            <p class="meta">EDP &middot; 90 ML</p>
+            <div class="placeholder desc">Descripción aquí</div>
+            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <div class="precio-box">Precio</div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img">
+            <img src="PERFUMERIA CATALOGO/Hermès Voyage d’Hermès 100ML Parfum U.png" alt="Hermès Voyage d'Hermès" loading="lazy">
+            <span class="tag-genero">Unisex</span>
+          </div>
+          <div class="card-body">
+            <p class="marca">Hermès</p>
+            <h3 class="nombre">Voyage d'Hermès</h3>
+            <p class="meta">Parfum &middot; 100 ML</p>
+            <div class="placeholder desc">Descripción aquí</div>
+            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <div class="precio-box">Precio</div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img">
+            <img src="PERFUMERIA CATALOGO/Prada Paradoxe Intense 50ML Edp L.png" alt="Prada Paradoxe Intense 50ml" loading="lazy">
+            <span class="tag-genero">Dama</span>
+          </div>
+          <div class="card-body">
+            <p class="marca">Prada</p>
+            <h3 class="nombre">Paradoxe Intense 50ml</h3>
+            <p class="meta">EDP &middot; 50 ML</p>
+            <div class="placeholder desc">Descripción aquí</div>
+            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <div class="precio-box">Precio</div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img">
+            <img src="PERFUMERIA CATALOGO/Prada Paradoxe Intense 90ML Edp L.png" alt="Prada Paradoxe Intense 90ml" loading="lazy">
+            <span class="tag-genero">Dama</span>
+          </div>
+          <div class="card-body">
+            <p class="marca">Prada</p>
+            <h3 class="nombre">Paradoxe Intense 90ml</h3>
+            <p class="meta">EDP &middot; 90 ML</p>
+            <div class="placeholder desc">Descripción aquí</div>
+            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <div class="precio-box">Precio</div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img">
+            <img src="PERFUMERIA CATALOGO/Hero pages Valentino Born in Roma 3.3 Edt M.png" alt="Valentino Born in Roma (Uomo)" loading="lazy">
+            <span class="tag-genero">Caballero</span>
+          </div>
+          <div class="card-body">
+            <p class="marca">Valentino</p>
+            <h3 class="nombre">Born in Roma (Uomo)</h3>
+            <p class="meta">EDT &middot; 100 ML</p>
+            <div class="placeholder desc">Descripción aquí</div>
+            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <div class="precio-box">Precio</div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img">
+            <img src="PERFUMERIA CATALOGO/Valentino Donna Born In Roma Intense 100ML Edp L.png" alt="Valentino Donna Born in Roma Intense" loading="lazy">
+            <span class="tag-genero">Dama</span>
+          </div>
+          <div class="card-body">
+            <p class="marca">Valentino</p>
+            <h3 class="nombre">Donna Born in Roma Intense</h3>
+            <p class="meta">EDP &middot; 100 ML</p>
+            <div class="placeholder desc">Descripción aquí</div>
+            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <div class="precio-box">Precio</div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img">
+            <img src="PERFUMERIA CATALOGO/Hero pages Versace Crystal Noir Parfum 3.0 Edp L.png" alt="Versace Crystal Noir" loading="lazy">
+            <span class="tag-genero">Dama</span>
+          </div>
+          <div class="card-body">
+            <p class="marca">Versace</p>
+            <h3 class="nombre">Crystal Noir</h3>
+            <p class="meta">EDP &middot; 90 ML</p>
+            <div class="placeholder desc">Descripción aquí</div>
+            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <div class="precio-box">Precio</div>
+          </div>
+        </article>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Colección Árabe</h2>
+    <p class="section-sub">Inspiradas &middot; larga duración</p>
+    <div class="grid">
+        <article class="card">
+          <div class="card-img">
+            <img src="PERFUMERIA CATALOGO/Armaf Art D’Amour 100ML Edp L.png" alt="Armaf Art D'Amour" loading="lazy">
+            <span class="tag-genero">Dama</span>
+          </div>
+          <div class="card-body">
+            <p class="marca">Armaf</p>
+            <h3 class="nombre">Art D'Amour</h3>
+            <p class="meta">EDP &middot; 100 ML</p>
+            <div class="placeholder desc">Descripción aquí</div>
+            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <div class="precio-box">Precio</div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img">
+            <img src="PERFUMERIA CATALOGO/Armaf Club de Nuit Intense Man 105ML Edt M.png" alt="Armaf Club de Nuit Intense (Man)" loading="lazy">
+            <span class="tag-genero">Caballero</span>
+          </div>
+          <div class="card-body">
+            <p class="marca">Armaf</p>
+            <h3 class="nombre">Club de Nuit Intense (Man)</h3>
+            <p class="meta">EDT &middot; 105 ML</p>
+            <div class="placeholder desc">Descripción aquí</div>
+            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <div class="precio-box">Precio</div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img">
+            <img src="PERFUMERIA CATALOGO/cuadradas Armaf Club de Nuit Intense 3.6 Edp L.png" alt="Armaf Club de Nuit Intense (Woman)" loading="lazy">
+            <span class="tag-genero">Dama</span>
+          </div>
+          <div class="card-body">
+            <p class="marca">Armaf</p>
+            <h3 class="nombre">Club de Nuit Intense (Woman)</h3>
+            <p class="meta">EDP &middot; 105 ML</p>
+            <div class="placeholder desc">Descripción aquí</div>
+            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <div class="precio-box">Precio</div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img">
+            <img src="PERFUMERIA CATALOGO/Armaf Miss Armaf Mystique 100ML Edp L.png" alt="Armaf Miss Mystique" loading="lazy">
+            <span class="tag-genero">Dama</span>
+          </div>
+          <div class="card-body">
+            <p class="marca">Armaf</p>
+            <h3 class="nombre">Miss Mystique</h3>
+            <p class="meta">EDP &middot; 100 ML</p>
+            <div class="placeholder desc">Descripción aquí</div>
+            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <div class="precio-box">Precio</div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img">
+            <img src="PERFUMERIA CATALOGO/portrait Armaf Beach Party 3.4 Edp U.png" alt="Armaf Beach Party" loading="lazy">
+            <span class="tag-genero">Unisex</span>
+          </div>
+          <div class="card-body">
+            <p class="marca">Armaf</p>
+            <h3 class="nombre">Beach Party</h3>
+            <p class="meta">EDP &middot; 100 ML</p>
+            <div class="placeholder desc">Descripción aquí</div>
+            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <div class="precio-box">Precio</div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img">
+            <img src="PERFUMERIA CATALOGO/portrait Armaf Odyssey Bahamas 3.4 Edp U.png" alt="Armaf Odyssey Bahamas" loading="lazy">
+            <span class="tag-genero">Unisex</span>
+          </div>
+          <div class="card-body">
+            <p class="marca">Armaf</p>
+            <h3 class="nombre">Odyssey Bahamas</h3>
+            <p class="meta">EDP &middot; 100 ML</p>
+            <div class="placeholder desc">Descripción aquí</div>
+            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <div class="precio-box">Precio</div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img">
+            <img src="PERFUMERIA CATALOGO/portrait Armaf Set Odyssey Mandarin Sky 4pc 3.4 Edp U.png" alt="Armaf Set Odyssey Mandarin Sky (4 pzs)" loading="lazy">
+            <span class="tag-genero">Unisex</span>
+          </div>
+          <div class="card-body">
+            <p class="marca">Armaf</p>
+            <h3 class="nombre">Set Odyssey Mandarin Sky (4 pzs)</h3>
+            <p class="meta">EDP &middot; Set x4</p>
+            <div class="placeholder desc">Descripción aquí</div>
+            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <div class="precio-box">Precio</div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img">
+            <img src="PERFUMERIA CATALOGO/portrait Armaf Yum Yum 3.4 Edp L.png" alt="Armaf Yum Yum" loading="lazy">
+            <span class="tag-genero">Dama</span>
+          </div>
+          <div class="card-body">
+            <p class="marca">Armaf</p>
+            <h3 class="nombre">Yum Yum</h3>
+            <p class="meta">EDP &middot; 100 ML</p>
+            <div class="placeholder desc">Descripción aquí</div>
+            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <div class="precio-box">Precio</div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img">
+            <img src="PERFUMERIA CATALOGO/Hero pages Afnan 9pm Night Out 3.4 Edp U.png" alt="Afnan 9pm Night Out" loading="lazy">
+            <span class="tag-genero">Unisex</span>
+          </div>
+          <div class="card-body">
+            <p class="marca">Afnan</p>
+            <h3 class="nombre">9pm Night Out</h3>
+            <p class="meta">EDP &middot; 100 ML</p>
+            <div class="placeholder desc">Descripción aquí</div>
+            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <div class="precio-box">Precio</div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img">
+            <img src="PERFUMERIA CATALOGO/Hero pages Bharara King 3.4 Edp M.png" alt="Bharara King" loading="lazy">
+            <span class="tag-genero">Caballero</span>
+          </div>
+          <div class="card-body">
+            <p class="marca">Bharara</p>
+            <h3 class="nombre">King</h3>
+            <p class="meta">EDP &middot; 100 ML</p>
+            <div class="placeholder desc">Descripción aquí</div>
+            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <div class="precio-box">Precio</div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img">
+            <img src="PERFUMERIA CATALOGO/Hero pages Mandarin sky 100 ml.png" alt="Armaf Odyssey Mandarin Sky" loading="lazy">
+            <span class="tag-genero">Unisex</span>
+          </div>
+          <div class="card-body">
+            <p class="marca">Armaf</p>
+            <h3 class="nombre">Odyssey Mandarin Sky</h3>
+            <p class="meta">- &middot; 100 ML</p>
+            <div class="placeholder desc">Descripción aquí</div>
+            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <div class="precio-box">Precio</div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img">
+            <img src="PERFUMERIA CATALOGO/Lattafa Badee Al Oud Amethyst 100ML Edp U.png" alt="Lattafa Badee Al Oud Amethyst" loading="lazy">
+            <span class="tag-genero">Unisex</span>
+          </div>
+          <div class="card-body">
+            <p class="marca">Lattafa</p>
+            <h3 class="nombre">Badee Al Oud Amethyst</h3>
+            <p class="meta">EDP &middot; 100 ML</p>
+            <div class="placeholder desc">Descripción aquí</div>
+            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <div class="precio-box">Precio</div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img">
+            <img src="PERFUMERIA CATALOGO/Lattafa Yara 20ML Perfume Oil L.png" alt="Lattafa Yara (Aceite)" loading="lazy">
+            <span class="tag-genero">Dama</span>
+          </div>
+          <div class="card-body">
+            <p class="marca">Lattafa</p>
+            <h3 class="nombre">Yara (Aceite)</h3>
+            <p class="meta">Aceite &middot; 20 ML</p>
+            <div class="placeholder desc">Descripción aquí</div>
+            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <div class="precio-box">Precio</div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img">
+            <img src="PERFUMERIA CATALOGO/cuadradas Lattafa Yara 3.4 Edp L.png" alt="Lattafa Yara (EDP)" loading="lazy">
+            <span class="tag-genero">Dama</span>
+          </div>
+          <div class="card-body">
+            <p class="marca">Lattafa</p>
+            <h3 class="nombre">Yara (EDP)</h3>
+            <p class="meta">EDP &middot; 100 ML</p>
+            <div class="placeholder desc">Descripción aquí</div>
+            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <div class="precio-box">Precio</div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img">
+            <img src="PERFUMERIA CATALOGO/cuadrada Lattafa Pride Shaheen Gold 3.4 Edp U.png" alt="Lattafa Pride Shaheen Gold" loading="lazy">
+            <span class="tag-genero">Unisex</span>
+          </div>
+          <div class="card-body">
+            <p class="marca">Lattafa</p>
+            <h3 class="nombre">Pride Shaheen Gold</h3>
+            <p class="meta">EDP &middot; 100 ML</p>
+            <div class="placeholder desc">Descripción aquí</div>
+            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <div class="precio-box">Precio</div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img">
+            <img src="PERFUMERIA CATALOGO/cuadrada Set Lattafa Badee Al Oud Honor and Glory 3.4 Edp U.png" alt="Lattafa Set Badee Al Oud Honor and Glory" loading="lazy">
+            <span class="tag-genero">Unisex</span>
+          </div>
+          <div class="card-body">
+            <p class="marca">Lattafa</p>
+            <h3 class="nombre">Set Badee Al Oud Honor and Glory</h3>
+            <p class="meta">EDP &middot; Set</p>
+            <div class="placeholder desc">Descripción aquí</div>
+            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <div class="precio-box">Precio</div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img">
+            <img src="PERFUMERIA CATALOGO/hero pages Lattafa Eclaire Banoffi 3.4 Edp L.png" alt="Lattafa Eclaire Banoffi" loading="lazy">
+            <span class="tag-genero">Dama</span>
+          </div>
+          <div class="card-body">
+            <p class="marca">Lattafa</p>
+            <h3 class="nombre">Eclaire Banoffi</h3>
+            <p class="meta">EDP &middot; 100 ML</p>
+            <div class="placeholder desc">Descripción aquí</div>
+            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <div class="precio-box">Precio</div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img">
+            <img src="PERFUMERIA CATALOGO/portrait Nitro Black Intense 3.4 Edp M.png" alt="Nitro Black Intense" loading="lazy">
+            <span class="tag-genero">Caballero</span>
+          </div>
+          <div class="card-body">
+            <p class="marca">Nitro</p>
+            <h3 class="nombre">Black Intense</h3>
+            <p class="meta">EDP &middot; 100 ML</p>
+            <div class="placeholder desc">Descripción aquí</div>
+            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <div class="precio-box">Precio</div>
+          </div>
+        </article>
+    </div>
+  </section>
+</main>
+
+<footer>SOLÈN Perfumería &mdash; Catálogo en construcción</footer>
+
+</body>
+</html>
