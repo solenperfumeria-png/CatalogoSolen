@@ -109,7 +109,7 @@
   }
   .grid{
     display:grid;
-    grid-template-columns:repeat(auto-fill, minmax(230px, 1fr));
+    grid-template-columns:repeat(auto-fill, minmax(250px, 1fr));
     gap:28px;
     margin-bottom:40px;
   }
@@ -147,7 +147,7 @@
     text-transform:uppercase;
     padding:4px 9px;
   }
-  .card-body{ padding:18px 18px 22px; display:flex; flex-direction:column; gap:6px; flex:1; }
+  .card-body{ padding:18px 18px 22px; display:flex; flex-direction:column; gap:8px; flex:1; }
   .marca{
     font-size:11px;
     letter-spacing:2px;
@@ -161,18 +161,46 @@
     color:var(--leather);
     line-height:1.2;
   }
-  .meta{ font-size:12px; color:var(--cacao); opacity:0.7; margin-bottom:6px; }
-  .placeholder{
-    border:1px dashed var(--khaki);
-    color:#9c9186;
+  .meta{ font-size:12px; color:var(--cacao); opacity:0.7; }
+  .chip-caracteristicas{
+    display:inline-block;
+    align-self:flex-start;
+    background:var(--khaki);
+    color:var(--cacao);
+    font-size:10px;
+    letter-spacing:0.5px;
+    text-transform:uppercase;
+    padding:4px 10px;
+    border-radius:20px;
+    font-weight:500;
+  }
+  .descripcion{
+    font-size:13px;
+    line-height:1.45;
+    color:var(--cacao);
+  }
+  .notas-reales{
     font-family:'Cormorant Garamond', serif;
     font-style:italic;
     font-size:13px;
-    padding:8px 10px;
-    background:#FCFBF8;
+    line-height:1.4;
+    color:#7a6f63;
+    border-top:1px dashed var(--khaki);
+    padding-top:8px;
+  }
+  .notas-reales strong{
+    font-style:normal;
+    font-family:'Jost',sans-serif;
+    font-weight:500;
+    text-transform:uppercase;
+    font-size:10px;
+    letter-spacing:1px;
+    color:var(--taupe);
+    display:block;
+    margin-bottom:2px;
   }
   .precio-box{
-    margin-top:8px;
+    margin-top:4px;
     border:1px solid var(--cacao);
     color:var(--cacao);
     font-family:'Bodoni Moda', serif;
@@ -196,7 +224,7 @@
 </head>
 <body>
 
-<div class="draft-banner">Borrador de diseño — 154 productos — faltan descripción, notas olfativas y precios</div>
+<div class="draft-banner">154 productos — falta precio</div>
 
 <header>
   <div class="logo">SOLÈN</div>
@@ -226,8 +254,9 @@
             <p class="marca">Ariana Grande</p>
             <h3 class="nombre">Cloud</h3>
             <p class="meta">EDP &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Gourmand floral dulce</span>
+            <p class="descripcion">Dulce y aterciopelado, evoca la comodidad de las nubes con crema de almendra y un fondo goloso de praliné.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: pera, coco. Corazón: crema de almendra, orquídea. Fondo: praliné, almizcle.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -240,8 +269,9 @@
             <p class="marca">Ariana Grande</p>
             <h3 class="nombre">Cloud Pink</h3>
             <p class="meta">EDP &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Floral frutal dulce</span>
+            <p class="descripcion">Versión más frutal y floral de Cloud, con bayas rojas y flor de cerezo sobre una base cremosa.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: frambuesa, pera. Corazón: jazmín, flor de cerezo. Fondo: almizcle cremoso, vainilla.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -254,8 +284,9 @@
             <p class="marca">Burberry</p>
             <h3 class="nombre">Her</h3>
             <p class="meta">EDP &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Frutal dulce</span>
+            <p class="descripcion">Afrutado y dulce, con bayas rojas maceradas y un fondo cálido de vainilla y ámbar.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: bayas rojas, cassis. Corazón: jazmín, violeta. Fondo: almizcle, ámbar, vainilla.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -268,8 +299,9 @@
             <p class="marca">Burberry</p>
             <h3 class="nombre">Her Intense</h3>
             <p class="meta">EDP &middot; 50 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Frutal ambarado</span>
+            <p class="descripcion">Versión más intensa de Her, con cereza negra y una base ambarada envolvente.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: cereza negra, cassis. Corazón: jazmín, rosa. Fondo: vainilla, ámbar, pachulí.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -282,8 +314,9 @@
             <p class="marca">Carolina Herrera</p>
             <h3 class="nombre">212 VIP Women</h3>
             <p class="meta">EDP &middot; 80 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Frutal floral gourmand</span>
+            <p class="descripcion">Glamurosa y sensual, con fruta de la pasión y una base de vainilla y caramelo.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: fruta de la pasión, gardenia. Corazón: gardenia, jazmín. Fondo: vainilla, caramelo, almizcle.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -296,8 +329,9 @@
             <p class="marca">Carolina Herrera</p>
             <h3 class="nombre">Good Girl</h3>
             <p class="meta">EDP &middot; 50 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Floral oriental gourmand</span>
+            <p class="descripcion">Contraste entre dulce y oscuro: almendra y café sobre una base de cacao y haba tonka.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: almendra, café. Corazón: jazmín sambac, tuberosa. Fondo: cacao, tonka, vainilla.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -310,8 +344,9 @@
             <p class="marca">Carolina Herrera</p>
             <h3 class="nombre">Good Girl Blush</h3>
             <p class="meta">EDP &middot; 80 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Floral frutal dulce</span>
+            <p class="descripcion">Versión más frutal y luminosa de Good Girl, con frambuesa y base dulce de tonka.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: frambuesa, mandarina. Corazón: rosa, jazmín. Fondo: tonka, vainilla.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -324,8 +359,9 @@
             <p class="marca">Carolina Herrera</p>
             <h3 class="nombre">La Bomba</h3>
             <p class="meta">EDP &middot; 30 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Floral oriental dulce</span>
+            <p class="descripcion">Floral blanco intenso y dulce, con un fondo cálido de vainilla y tonka.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: mandarina, ylang ylang. Corazón: jazmín, tuberosa. Fondo: vainilla, haba tonka.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -338,8 +374,9 @@
             <p class="marca">Carolina Herrera</p>
             <h3 class="nombre">Very Good Girl</h3>
             <p class="meta">EDP &middot; 30 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Floral oriental intenso</span>
+            <p class="descripcion">Versión más oscura y rebelde de Good Girl, floral con fondo amaderado-vainillado.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: grosella negra. Corazón: jazmín, rosa oscura. Fondo: pachulí, vainilla.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -352,8 +389,9 @@
             <p class="marca">Chanel</p>
             <h3 class="nombre">Coco Mademoiselle</h3>
             <p class="meta">EDP &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Floral oriental chipre</span>
+            <p class="descripcion">Icónico floral chipre con toque cítrico y una base cálida de pachulí y vainilla.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: naranja, bergamota. Corazón: rosa, jazmín, pachulí. Fondo: vainilla, ámbar, vetiver.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -366,8 +404,9 @@
             <p class="marca">Chanel</p>
             <h3 class="nombre">N°5</h3>
             <p class="meta">EDP &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Floral aldehído</span>
+            <p class="descripcion">El floral aldehído más icónico de la perfumería, atemporal y elegante.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: aldehídos, ylang ylang. Corazón: rosa, jazmín, lirio. Fondo: sándalo, vainilla, almizcle.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -380,8 +419,9 @@
             <p class="marca">Creed</p>
             <h3 class="nombre">Aventus For Her</h3>
             <p class="meta">EDP &middot; 25 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Floral frutal afrutado</span>
+            <p class="descripcion">Versión femenina de Aventus: frutal, floral y elegante con fondo amaderado suave.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: piña, grosella negra. Corazón: rosa, jazmín. Fondo: almizcle, ámbar, madera.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -394,8 +434,9 @@
             <p class="marca">Dior</p>
             <h3 class="nombre">J'adore</h3>
             <p class="meta">EDP &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Floral afrutado luminoso</span>
+            <p class="descripcion">El floral afrutado más icónico de Dior, luminoso y radiante.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: bergamota, mandarina. Corazón: jazmín, rosa, ylang ylang. Fondo: almizcle.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -408,8 +449,9 @@
             <p class="marca">Dolce & Gabbana</p>
             <h3 class="nombre">Light Blue</h3>
             <p class="meta">EDT &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Cítrico floral fresco</span>
+            <p class="descripcion">Fresco y mediterráneo, evoca la costa amalfitana con cítricos y flores blancas.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: manzana, limón siciliano. Corazón: campanilla, jazmín. Fondo: cedro, almizcle.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -422,8 +464,9 @@
             <p class="marca">Giorgio Armani</p>
             <h3 class="nombre">My Way</h3>
             <p class="meta">EDP &middot; 90 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Floral blanco</span>
+            <p class="descripcion">Floral blanco luminoso, un viaje personal expresado en jazmín y tuberosa.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: bergamota, azahar. Corazón: jazmín, tuberosa. Fondo: vainilla, almizcle blanco, cedro.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -436,8 +479,9 @@
             <p class="marca">Prada</p>
             <h3 class="nombre">Paradoxe Intense 50ml</h3>
             <p class="meta">EDP &middot; 50 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Floral amberado intenso</span>
+            <p class="descripcion">Floral amaderado intenso, moderno y envolvente con pachulí y ámbar gris.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: pera, jazmín. Corazón: pachulí blanco, ámbar gris. Fondo: almizcle, vainilla.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -450,8 +494,9 @@
             <p class="marca">Prada</p>
             <h3 class="nombre">Paradoxe Intense 90ml</h3>
             <p class="meta">EDP &middot; 90 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Floral amberado intenso</span>
+            <p class="descripcion">Floral amaderado intenso, moderno y envolvente con pachulí y ámbar gris.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: pera, jazmín. Corazón: pachulí blanco, ámbar gris. Fondo: almizcle, vainilla.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -464,8 +509,9 @@
             <p class="marca">Valentino</p>
             <h3 class="nombre">Donna Born in Roma Intense</h3>
             <p class="meta">EDP &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Floral ambarado intenso</span>
+            <p class="descripcion">Floral intenso y sensual con un fondo cálido de vainilla y ámbar.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: bergamota. Corazón: jazmín, rosa. Fondo: vainilla, almizcle, ámbar.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -478,8 +524,9 @@
             <p class="marca">Versace</p>
             <h3 class="nombre">Crystal Noir</h3>
             <p class="meta">EDP &middot; 90 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Floral oriental misterioso</span>
+            <p class="descripcion">Misterioso y sofisticado, floral oscuro con fondo ambarado envolvente.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: pimienta rosa, casia. Corazón: gardenia, jazmín. Fondo: ámbar, almizcle, madera de guayaco.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -492,8 +539,9 @@
             <p class="marca">Yves Saint Laurent</p>
             <h3 class="nombre">Black Opium</h3>
             <p class="meta">Parfum &middot; 90 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Oriental gourmand adictivo</span>
+            <p class="descripcion">El gourmand adictivo por excelencia: café, vainilla y flores blancas.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: pera, mandarina, pimienta rosa. Corazón: café, jazmín, flor de naranjo. Fondo: vainilla, pachulí, cedro.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -506,8 +554,9 @@
             <p class="marca">Chanel</p>
             <h3 class="nombre">Gabrielle</h3>
             <p class="meta">EDP &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Floral solar</span>
+            <p class="descripcion">Ramo floral luminoso y solar, sin fondo oriental pesado, muy versátil.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: grosella negra, mandarina. Corazón: jazmín, tuberosa, ylang ylang. Fondo: almizcle, madera de sándalo.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -520,8 +569,9 @@
             <p class="marca">Chanel</p>
             <h3 class="nombre">Chance Eau Tendre</h3>
             <p class="meta">EDT &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Floral afrutado tierno</span>
+            <p class="descripcion">Delicado y fresco, floral afrutado con un fondo suave de almizcle blanco.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: toronja, quinoa. Corazón: jazmín, peonía. Fondo: almizcle blanco, ámbar.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -534,8 +584,9 @@
             <p class="marca">Viktor & Rolf</p>
             <h3 class="nombre">Flowerbomb</h3>
             <p class="meta">EDP &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Floral oriental explosivo</span>
+            <p class="descripcion">Explosión floral oriental, dulce e intensa, un clásico moderno.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: té verde, bergamota. Corazón: jazmín, rosa, orquídea. Fondo: pachulí, vainilla, almizcle.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -548,8 +599,9 @@
             <p class="marca">Givenchy</p>
             <h3 class="nombre">Irresistible</h3>
             <p class="meta">EDP &middot; 80 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Floral rosa fresco</span>
+            <p class="descripcion">Floral de rosa fresca y verde, moderno y delicado.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: rosa fresca. Corazón: rosa, peonía. Fondo: almizcle, vetiver, ámbar.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -562,8 +614,9 @@
             <p class="marca">Gucci</p>
             <h3 class="nombre">Flora Gorgeous Gardenia</h3>
             <p class="meta">EDP &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Floral blanco frutal</span>
+            <p class="descripcion">Floral blanco radiante centrado en gardenia, fresco y femenino.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: pera, grosella roja. Corazón: gardenia, jazmín. Fondo: almizcle, pachulí.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -576,8 +629,9 @@
             <p class="marca">Gucci</p>
             <h3 class="nombre">Guilty Pour Femme</h3>
             <p class="meta">EDT &middot; 90 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Floral frutal</span>
+            <p class="descripcion">Fresco y floral con un toque afrutado, versión ligera de Guilty.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: mandarina, pera. Corazón: rosa, peonía. Fondo: pachulí, ámbar.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -590,8 +644,9 @@
             <p class="marca">Gucci</p>
             <h3 class="nombre">Guilty Absolute</h3>
             <p class="meta">EDP &middot; 90 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Floral amaderado intenso</span>
+            <p class="descripcion">Más intenso y amaderado que el Guilty original, sensual y envolvente.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: ciruela. Corazón: rosa, iris. Fondo: pachulí, almizcle, madera.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -604,8 +659,9 @@
             <p class="marca">Gucci</p>
             <h3 class="nombre">Bloom</h3>
             <p class="meta">EDP &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Floral blanco intenso</span>
+            <p class="descripcion">Ramo floral blanco denso e intenso, dominado por tuberosa y jazmín.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: tuberosa. Corazón: jazmín sambac, jazmín rango-rango. Fondo: iris.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -618,8 +674,9 @@
             <p class="marca">Paco Rabanne</p>
             <h3 class="nombre">Lady Million</h3>
             <p class="meta">EDP &middot; 80 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Floral afrutado dorado</span>
+            <p class="descripcion">Glamuroso y dorado, floral afrutado con un fondo dulce de miel y tonka.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: frambuesa, naranja amarga. Corazón: jazmín, azahar, gardenia. Fondo: haba tonka, miel, almizcle.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -632,8 +689,9 @@
             <p class="marca">Lancôme</p>
             <h3 class="nombre">Idôle L'Intense</h3>
             <p class="meta">EDP &middot; 50 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Floral almizclado intenso</span>
+            <p class="descripcion">Versión más intensa de Idôle, floral limpio con fondo cálido de vainilla.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: pera. Corazón: rosa, jazmín. Fondo: vainilla, almizcle blanco, pachulí.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -646,8 +704,9 @@
             <p class="marca">Lancôme</p>
             <h3 class="nombre">Trésor</h3>
             <p class="meta">EDP &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Floral frutal clásico</span>
+            <p class="descripcion">Clásico floral frutal romántico, cálido y elegante.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: melocotón, lichi. Corazón: rosa, jacinto, lirio. Fondo: almizcle, sándalo, vainilla.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -660,8 +719,9 @@
             <p class="marca">Lancôme</p>
             <h3 class="nombre">Idôle</h3>
             <p class="meta">EDP &middot; 75 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Floral limpio moderno</span>
+            <p class="descripcion">Floral limpio y moderno, fresco con un fondo suave de almizcle y vainilla.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: pera, bergamota. Corazón: rosa, jazmín. Fondo: vainilla, almizcle blanco, pachulí.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -674,8 +734,9 @@
             <p class="marca">Guerlain</p>
             <h3 class="nombre">Mon Guerlain</h3>
             <p class="meta">EDP &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Floral aromático dulce</span>
+            <p class="descripcion">Floral aromático con lavanda y una base cálida de vainilla y tonka.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: lavanda. Corazón: jazmín sambac, rosa. Fondo: vainilla, haba tonka, sándalo.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -688,8 +749,9 @@
             <p class="marca">Montale</p>
             <h3 class="nombre">Oud Roses</h3>
             <p class="meta">EDP &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Floral amaderado oud</span>
+            <p class="descripcion">Rosa intensa combinada con oud, cálido y de gran proyección.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: rosa. Corazón: rosa damascena, oud. Fondo: almizcle, madera.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -702,8 +764,9 @@
             <p class="marca">Nina Ricci</p>
             <h3 class="nombre">Nina</h3>
             <p class="meta">EDT &middot; 80 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Floral frutal dulce</span>
+            <p class="descripcion">Dulce y afrutado en su icónico frasco de manzana, floral con fondo goloso.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: manzana, mandarina. Corazón: jazmín, azucena. Fondo: vainilla, caramelo, almizcle.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -716,8 +779,9 @@
             <p class="marca">Prada</p>
             <h3 class="nombre">Candy</h3>
             <p class="meta">EDP &middot; 80 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Gourmand dulce</span>
+            <p class="descripcion">Gourmand goloso centrado en caramelo, cálido y dulce.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: caramelo. Corazón: flor de azahar, benjuí. Fondo: almizcle, madera de haba tonka.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -730,8 +794,9 @@
             <p class="marca">Tom Ford</p>
             <h3 class="nombre">Lost Cherry</h3>
             <p class="meta">EDP &middot; 30 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Gourmand frutal intenso</span>
+            <p class="descripcion">Sensual y adictivo, cereza embriagadora sobre un fondo cálido de vainilla y pachulí.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: cereza licorosa, almendra amarga. Corazón: flor de cerezo, rosa turca. Fondo: pachulí, vainilla, almizcle.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -744,8 +809,9 @@
             <p class="marca">Tous</p>
             <h3 class="nombre">Love Me</h3>
             <p class="meta">EDP &middot; 90 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Floral dulce</span>
+            <p class="descripcion">Floral dulce y romántico, ligero y fácil de llevar.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: pera, mandarina. Corazón: jazmín, flor de azahar. Fondo: vainilla, almizcle.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -758,8 +824,9 @@
             <p class="marca">Versace</p>
             <h3 class="nombre">Bright Crystal</h3>
             <p class="meta">EDT &middot; 90 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Floral afrutado fresco</span>
+            <p class="descripcion">Fresco y luminoso, floral afrutado con un fondo suave de almizcle.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: granada, limón. Corazón: peonía, magnolia, loto. Fondo: almizcle, ámbar, madera.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -772,8 +839,9 @@
             <p class="marca">Yves Saint Laurent</p>
             <h3 class="nombre">Libre Intense</h3>
             <p class="meta">EDP &middot; 90 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Floral aromático intenso</span>
+            <p class="descripcion">Versión más intensa de Libre, lavanda y flor de azahar sobre fondo cálido de vainilla.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: lavanda, mandarina. Corazón: flor de azahar, jazmín. Fondo: vainilla, almizcle, haba tonka.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -786,8 +854,9 @@
             <p class="marca">Another Lab</p>
             <h3 class="nombre">Rioh</h3>
             <p class="meta">EDP &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Floral cítrico</span>
+            <p class="descripcion">Fresco y floral, de la línea nicho Another Lab.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: cítricos. Corazón: floral blanco. Fondo: almizcle, madera clara.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -800,8 +869,9 @@
             <p class="marca">Dior</p>
             <h3 class="nombre">Miss Dior</h3>
             <p class="meta">EDP &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Floral chipre</span>
+            <p class="descripcion">Romántico y floral, rosa y peonía sobre un fondo chipre suave.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: mandarina, grosella. Corazón: rosa, peonía. Fondo: pachulí, almizcle.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -814,8 +884,9 @@
             <p class="marca">Xerjoff</p>
             <h3 class="nombre">Erba Pura</h3>
             <p class="meta">EDP &middot; 50 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Floral frutal cítrico</span>
+            <p class="descripcion">Frutal y floral, luminoso con un fondo cálido; de la casa de nicho Xerjoff.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: bergamota, piña, cassis. Corazón: jazmín, flor de azahar. Fondo: almizcle, sándalo, ámbar.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -828,8 +899,9 @@
             <p class="marca">Yves Saint Laurent</p>
             <h3 class="nombre">Libre</h3>
             <p class="meta">EDP &middot; 90 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Floral aromático</span>
+            <p class="descripcion">La versión original de Libre: lavanda y azahar sobre un fondo cálido de vainilla.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: mandarina, casis. Corazón: flor de azahar, jazmín. Fondo: vainilla, almizcle blanco, haba tonka.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -848,8 +920,9 @@
             <p class="marca">Armaf</p>
             <h3 class="nombre">Art D'Amour</h3>
             <p class="meta">EDP &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Floral gourmand</span>
+            <p class="descripcion">Floral gourmand dulce y envolvente, con flores blancas y un toque goloso de praliné y vainilla.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: grosella negra, pera. Corazón: jazmín, azahar. Fondo: praliné, vainilla, pachulí.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -862,8 +935,9 @@
             <p class="marca">Armaf</p>
             <h3 class="nombre">Club de Nuit Intense (Woman)</h3>
             <p class="meta">EDP &middot; 105 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Floral afrutado</span>
+            <p class="descripcion">Versión femenina floral afrutada de la línea Club de Nuit, dulce y sofisticada.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: mandarina, frambuesa. Corazón: jazmín, rosa. Fondo: pachulí, almizcle, vainilla.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -876,8 +950,9 @@
             <p class="marca">Armaf</p>
             <h3 class="nombre">Miss Mystique</h3>
             <p class="meta">EDP &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Floral almizclado</span>
+            <p class="descripcion">Floral almizclado con toque afrutado, delicado y femenino para el uso diario.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: bergamota, pera. Corazón: jazmín, rosa, lirio. Fondo: almizcle, vainilla, sándalo.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -890,8 +965,9 @@
             <p class="marca">Armaf</p>
             <h3 class="nombre">Yum Yum</h3>
             <p class="meta">EDP &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Floral gourmand dulce</span>
+            <p class="descripcion">Dulce y juguetona, con acordes golosos de vainilla y caramelo sobre base floral.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: mandarina, frambuesa. Corazón: rosa, jazmín. Fondo: vainilla, almizcle, caramelo.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -904,8 +980,9 @@
             <p class="marca">Lattafa</p>
             <h3 class="nombre">Yara (Aceite)</h3>
             <p class="meta">Aceite &middot; 20 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Floral frutal dulce</span>
+            <p class="descripcion">Versión en aceite de Yara: floral frutal, dulce y de aplicación concentrada.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: pera, mandarina. Corazón: jazmín, tuberosa. Fondo: vainilla, almizcle.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -918,8 +995,9 @@
             <p class="marca">Lattafa</p>
             <h3 class="nombre">Yara (EDP)</h3>
             <p class="meta">EDP &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Floral frutal dulce</span>
+            <p class="descripcion">Uno de los más vendidos de Lattafa: floral frutal, dulce y muy duradero.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: pera, mandarina. Corazón: jazmín, tuberosa. Fondo: vainilla, almizcle.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -932,8 +1010,9 @@
             <p class="marca">Lattafa</p>
             <h3 class="nombre">Eclaire Banoffi</h3>
             <p class="meta">EDP &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Gourmand dulce</span>
+            <p class="descripcion">Gourmand goloso inspirado en el postre banoffee: plátano, caramelo y crema.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: plátano, caramelo. Corazón: crema, vainilla. Fondo: almizcle, haba tonka.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -946,8 +1025,9 @@
             <p class="marca">Lattafa</p>
             <h3 class="nombre">Yara Elixir</h3>
             <p class="meta">EDP &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Gourmand floral dulce</span>
+            <p class="descripcion">Versión más golosa y ambarada de Yara, con praliné y caramelo.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: pera, praliné. Corazón: jazmín, orquídea. Fondo: vainilla, caramelo, almizcle.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -960,8 +1040,9 @@
             <p class="marca">ILMIN</p>
             <h3 class="nombre">Il Roso</h3>
             <p class="meta">EDP &middot; 30 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Floral rosa</span>
+            <p class="descripcion">Floral centrado en rosa, dulce y romántico.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: rosa, frutas rojas. Corazón: rosa turca. Fondo: almizcle, madera.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -983,8 +1064,9 @@
             <p class="marca">Valentino</p>
             <h3 class="nombre">Born in Roma (Uomo)</h3>
             <p class="meta">EDT &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Amaderado especiado</span>
+            <p class="descripcion">Urbano y magnético, especiado con fondo de cuero y ámbar.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: bergamota, notas metálicas. Corazón: nuez moscada, salvia. Fondo: ámbar, cedro, cuero.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -997,8 +1079,9 @@
             <p class="marca">Carolina Herrera</p>
             <h3 class="nombre">212 VIP Men</h3>
             <p class="meta">EDT &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Aromático especiado</span>
+            <p class="descripcion">Fresco y festivo, con un toque de vodka helado y fondo de cuero y tabaco.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: menta, vodka. Corazón: salvia, pimienta. Fondo: almizcle, cuero, tabaco.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1011,8 +1094,9 @@
             <p class="marca">Bvlgari</p>
             <h3 class="nombre">Aqva</h3>
             <p class="meta">EDT &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Acuático amaderado</span>
+            <p class="descripcion">Fresco y acuático con fondo amaderado, evoca la profundidad del mar.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: notas marinas, romero. Corazón: notas amaderadas acuáticas. Fondo: almizcle, ámbar.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1025,8 +1109,9 @@
             <p class="marca">Carolina Herrera</p>
             <h3 class="nombre">212</h3>
             <p class="meta">Parfum &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Aromático fresco</span>
+            <p class="descripcion">El clásico urbano de Carolina Herrera, fresco y aromático con fondo amaderado.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: cítricos, menta. Corazón: salvia, cardamomo. Fondo: cedro, almizcle, ámbar.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1039,8 +1124,9 @@
             <p class="marca">Chanel</p>
             <h3 class="nombre">Bleu de Chanel</h3>
             <p class="meta">Parfum &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Amaderado aromático</span>
+            <p class="descripcion">Fresco y elegante en salida, con un fondo amaderado profundo de sándalo e incienso.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: pomelo, menta. Corazón: jengibre, nuez moscada. Fondo: sándalo, cedro, incienso.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1053,8 +1139,9 @@
             <p class="marca">Christian Dior</p>
             <h3 class="nombre">Sauvage</h3>
             <p class="meta">EDP &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Fresco amaderado ambarado</span>
+            <p class="descripcion">El fresco amaderado más popular actualmente, potente y versátil.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: bergamota, pimienta de Sichuan. Corazón: lavanda, geranio. Fondo: ámbar gris, cedro, vetiver.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1067,8 +1154,9 @@
             <p class="marca">Dior</p>
             <h3 class="nombre">Fahrenheit</h3>
             <p class="meta">EDT &middot; 200 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Amaderado cuero</span>
+            <p class="descripcion">Icónico y audaz, con la característica nota de cuero y violeta.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: mandarina, lavanda. Corazón: violeta, cuero. Fondo: sándalo, almizcle, ámbar.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1081,8 +1169,9 @@
             <p class="marca">Dior</p>
             <h3 class="nombre">Homme Intense</h3>
             <p class="meta">EDP &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Amaderado polvoriento</span>
+            <p class="descripcion">Elegante y polvoriento, iris y cacao sobre un fondo amaderado profundo.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: lavanda, pimienta rosa. Corazón: iris, cacao. Fondo: vetiver, cedro, ámbar.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1095,8 +1184,9 @@
             <p class="marca">Giorgio Armani</p>
             <h3 class="nombre">Acqua di Giò</h3>
             <p class="meta">EDT &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Acuático aromático</span>
+            <p class="descripcion">El acuático más icónico y versátil, fresco y mediterráneo.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: notas marinas, bergamota. Corazón: jazmín, romero. Fondo: musgo de roble, almizcle, cedro.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1109,8 +1199,9 @@
             <p class="marca">Hugo Boss</p>
             <h3 class="nombre">The Scent</h3>
             <p class="meta">EDT &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Aromático especiado</span>
+            <p class="descripcion">Seductor y cálido, contraste entre frescura y una base de cuero y tonka.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: manzana, jengibre. Corazón: lavanda. Fondo: cuero, haba tonka.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1123,8 +1214,9 @@
             <p class="marca">Jean Paul Gaultier</p>
             <h3 class="nombre">Scandal Pour Homme</h3>
             <p class="meta">EDT &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Fresco especiado dulce</span>
+            <p class="descripcion">Fresco y adictivo, con un fondo dulce y especiado de tonka y pachulí.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: pomelo, menta. Corazón: lavanda, ciruela. Fondo: haba tonka, pachulí.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1137,8 +1229,9 @@
             <p class="marca">Paco Rabanne</p>
             <h3 class="nombre">Black XS</h3>
             <p class="meta">EDT &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Aromático especiado</span>
+            <p class="descripcion">Rebelde y magnético, café y especias sobre un fondo ambarado.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: menta, jengibre. Corazón: café, salvia. Fondo: ámbar, cacao, cedro.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1151,8 +1244,9 @@
             <p class="marca">Paco Rabanne</p>
             <h3 class="nombre">Invictus Legend</h3>
             <p class="meta">EDP &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Aromático dulce intenso</span>
+            <p class="descripcion">Versión más intensa y dulce de Invictus, con tonka y un fondo de cuero.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: lavanda, manzana. Corazón: haba tonka, salvia. Fondo: pachulí, ámbar, cuero.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1165,8 +1259,9 @@
             <p class="marca">Paco Rabanne</p>
             <h3 class="nombre">Invictus Victory</h3>
             <p class="meta">EDP &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Aromático amaderado dulce</span>
+            <p class="descripcion">Potente y victorioso, tonka y salvia sobre una base amaderada intensa.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: laurel, romero. Corazón: haba tonka, salvia ambarada. Fondo: pachulí, madera de guayaco.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1179,8 +1274,9 @@
             <p class="marca">Paco Rabanne</p>
             <h3 class="nombre">Invictus</h3>
             <p class="meta">EDT &middot; 200 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Acuático amaderado</span>
+            <p class="descripcion">Fresco y deportivo, acuático con un fondo amaderado y ambarado.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: pomelo, notas marinas. Corazón: laurel, jazmín. Fondo: ámbar, musgo, madera.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1193,8 +1289,9 @@
             <p class="marca">Paco Rabanne</p>
             <h3 class="nombre">One Million</h3>
             <p class="meta">EDT &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Amaderado especiado dulce</span>
+            <p class="descripcion">Icónico y llamativo, especias dulces sobre un fondo de cuero.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: pomelo, menta, sangre de drago. Corazón: canela, especias. Fondo: cuero, ámbar, madera.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1207,8 +1304,9 @@
             <p class="marca">Prada</p>
             <h3 class="nombre">Luna Rossa</h3>
             <p class="meta">EDT &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Aromático fresco</span>
+            <p class="descripcion">Deportivo y fresco, aromático con un fondo suave y limpio.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: lavanda, limón. Corazón: notas aromáticas. Fondo: almizcle, ámbar.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1221,8 +1319,9 @@
             <p class="marca">Versace</p>
             <h3 class="nombre">Dylan Blue</h3>
             <p class="meta">EDT &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Aromático acuático</span>
+            <p class="descripcion">Fresco y moderno, con ambroxan y un fondo amaderado limpio.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: toronja, manzana. Corazón: violeta, ambroxan. Fondo: pachulí, cedro.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1235,8 +1334,9 @@
             <p class="marca">Versace</p>
             <h3 class="nombre">Eros</h3>
             <p class="meta">EDT &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Aromático fresco dulce</span>
+            <p class="descripcion">Potente y fresco, con tonka y vainilla sobre un fondo amaderado.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: menta, manzana verde. Corazón: haba tonka, ambroxan. Fondo: vainilla, cedro, musgo de roble.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1249,8 +1349,9 @@
             <p class="marca">Viktor & Rolf</p>
             <h3 class="nombre">Spicebomb</h3>
             <p class="meta">EDT &middot; 90 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Especiado amaderado</span>
+            <p class="descripcion">Explosivo y especiado, canela y tabaco sobre un fondo de cuero.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: pomelo rosa, pimienta rosa. Corazón: canela, azafrán. Fondo: tabaco, cuero, vetiver.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1263,8 +1364,9 @@
             <p class="marca">Yves Saint Laurent</p>
             <h3 class="nombre">Confirmar nombre</h3>
             <p class="meta">EDP &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Por confirmar</span>
+            <p class="descripcion">El archivo no especifica qué fragancia de YSL es.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Por confirmar según fragancia exacta.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1277,8 +1379,9 @@
             <p class="marca">Another Lab</p>
             <h3 class="nombre">Germany 92</h3>
             <p class="meta">EDP &middot; 90 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Aromático fresco</span>
+            <p class="descripcion">Fresco y aromático, de la línea conceptual Another Lab.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: cítricos, notas verdes. Corazón: notas aromáticas. Fondo: almizcle, madera.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1291,8 +1394,9 @@
             <p class="marca">Another Lab</p>
             <h3 class="nombre">Italy 86</h3>
             <p class="meta">EDP &middot; 90 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Cítrico aromático</span>
+            <p class="descripcion">Fresco y mediterráneo, inspirado en Italia; línea conceptual Another Lab.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: cítricos italianos. Corazón: notas florales. Fondo: madera clara, almizcle.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1305,8 +1409,9 @@
             <p class="marca">Giorgio Armani</p>
             <h3 class="nombre">Stronger With You Intensely</h3>
             <p class="meta">EDP &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Oriental especiado dulce</span>
+            <p class="descripcion">Versión más intensa y dulce de Stronger With You, cálida y envolvente.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: pimienta rosa, cardamomo. Corazón: lavanda, haba tonka. Fondo: vainilla, ámbar, cacao.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1319,8 +1424,9 @@
             <p class="marca">Bvlgari</p>
             <h3 class="nombre">Man In Black</h3>
             <p class="meta">EDP &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Oriental especiado cuero</span>
+            <p class="descripcion">Intenso y masculino, ron y cuero sobre un fondo ambarado.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: especias. Corazón: ron, cuero. Fondo: haba tonka, ámbar, cuero.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1333,8 +1439,9 @@
             <p class="marca">Bond No. 9</p>
             <h3 class="nombre">The Scent of Peace</h3>
             <p class="meta">EDP &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Aromático limpio</span>
+            <p class="descripcion">Fresco y limpio, aromático con fondo amaderado suave; nicho neoyorquino.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: bergamota, notas verdes. Corazón: violeta. Fondo: almizcle, cedro.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1347,8 +1454,9 @@
             <p class="marca">Carolina Herrera</p>
             <h3 class="nombre">212 Heroes</h3>
             <p class="meta">EDT &middot; 90 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Aromático fresco</span>
+            <p class="descripcion">Fresco y urbano, edición especial de la línea 212.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: cítricos. Corazón: notas aromáticas. Fondo: almizcle, madera.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1361,8 +1469,9 @@
             <p class="marca">Carolina Herrera</p>
             <h3 class="nombre">212 Men NYC</h3>
             <p class="meta">EDT &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Aromático fresco</span>
+            <p class="descripcion">El clásico urbano masculino de Carolina Herrera.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: cítricos, menta. Corazón: salvia, cardamomo. Fondo: cedro, almizcle.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1375,8 +1484,9 @@
             <p class="marca">Carolina Herrera</p>
             <h3 class="nombre">212 VIP Black</h3>
             <p class="meta">EDP &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Oriental especiado intenso</span>
+            <p class="descripcion">Versión nocturna e intensa de 212 VIP, con café y cuero.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: café, cardamomo. Corazón: especias. Fondo: cuero, ámbar, madera.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1389,8 +1499,9 @@
             <p class="marca">Carolina Herrera</p>
             <h3 class="nombre">Bad Boy</h3>
             <p class="meta">EDT &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Oriental especiado dulce</span>
+            <p class="descripcion">Audaz y dulce, cacao y tonka sobre un fondo ambarado.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: bergamota, anís. Corazón: cacao, lavanda. Fondo: haba tonka, ámbar, vetiver.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1403,8 +1514,9 @@
             <p class="marca">Carolina Herrera</p>
             <h3 class="nombre">Men Clásico</h3>
             <p class="meta">EDT &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Aromático clásico</span>
+            <p class="descripcion">El clásico masculino original de Carolina Herrera, fresco y atemporal.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: cítricos, lavanda. Corazón: especias. Fondo: cedro, almizcle.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1417,8 +1529,9 @@
             <p class="marca">Creed</p>
             <h3 class="nombre">Oud Zarian</h3>
             <p class="meta">EDP &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Oriental amaderado oud</span>
+            <p class="descripcion">Oud elegante y especiado, típico estilo Creed de lujo.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: azafrán, cítricos. Corazón: oud, rosa. Fondo: ámbar, madera, almizcle.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1431,8 +1544,9 @@
             <p class="marca">Creed</p>
             <h3 class="nombre">Aventus Cologne</h3>
             <p class="meta">EDP &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Amaderado frutal fresco</span>
+            <p class="descripcion">Versión más ligera y fresca de Aventus, frutal y amaderada.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: piña, bergamota. Corazón: abedul, jazmín. Fondo: almizcle, ámbar.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1445,8 +1559,9 @@
             <p class="marca">Creed</p>
             <h3 class="nombre">Green Irish Tweed</h3>
             <p class="meta">EDP &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Aromático verde</span>
+            <p class="descripcion">Fresco y verde, un clásico atemporal de Creed.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: limón, verbena. Corazón: violeta, iris. Fondo: sándalo, ámbar, almizcle.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1459,8 +1574,9 @@
             <p class="marca">Creed</p>
             <h3 class="nombre">Silver Mountain Water</h3>
             <p class="meta">EDP &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Cítrico acuático fresco</span>
+            <p class="descripcion">Fresco y cristalino, cítrico con un toque de té verde.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: mandarina verde, bergamota. Corazón: té verde, moras. Fondo: almizcle, sándalo.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1473,8 +1589,9 @@
             <p class="marca">Dolce & Gabbana</p>
             <h3 class="nombre">Light Blue Men</h3>
             <p class="meta">EDT &middot; Confirmar</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Cítrico acuático fresco</span>
+            <p class="descripcion">Fresco y mediterráneo, versión masculina de Light Blue.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: limón siciliano, manzana. Corazón: romero, jazmín. Fondo: almizcle blanco, roble.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1487,8 +1604,9 @@
             <p class="marca">Dior</p>
             <h3 class="nombre">Sauvage Elixir</h3>
             <p class="meta">Parfum &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Oriental especiado intenso</span>
+            <p class="descripcion">Versión más intensa y especiada de Sauvage, cálida y concentrada.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: canela, lavanda. Corazón: especias. Fondo: vainilla, haba tonka, ámbar.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1501,8 +1619,9 @@
             <p class="marca">Jean Paul Gaultier</p>
             <h3 class="nombre">Le Beau Paradise Garden</h3>
             <p class="meta">EDP &middot; 75 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Floral tropical gourmand</span>
+            <p class="descripcion">Tropical y dulce, coco y piña sobre un fondo de tonka.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: piña, coco. Corazón: flor de ylang ylang. Fondo: haba tonka, madera.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1515,8 +1634,9 @@
             <p class="marca">Jean Paul Gaultier</p>
             <h3 class="nombre">Le Male Elixir</h3>
             <p class="meta">Parfum &middot; 125 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Oriental gourmand intenso</span>
+            <p class="descripcion">Concentrado y adictivo, cacao y café sobre un fondo ambarado.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: lavanda, vainilla. Corazón: cacao, café. Fondo: haba tonka, ámbar, madera.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1529,8 +1649,9 @@
             <p class="marca">Jean Paul Gaultier</p>
             <h3 class="nombre">Le Male Le Parfum Intense</h3>
             <p class="meta">Parfum &middot; 125 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Oriental especiado dulce</span>
+            <p class="descripcion">Versión intensa de Le Male, dulce y ambarada.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: lavanda. Corazón: vainilla, especias. Fondo: haba tonka, ámbar.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1543,8 +1664,9 @@
             <p class="marca">Jean Paul Gaultier</p>
             <h3 class="nombre">Le Male Le Parfum Intense</h3>
             <p class="meta">Parfum &middot; 75 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Oriental especiado dulce</span>
+            <p class="descripcion">Versión intensa de Le Male, dulce y ambarada.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: lavanda. Corazón: vainilla, especias. Fondo: haba tonka, ámbar.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1557,8 +1679,9 @@
             <p class="marca">Jean Paul Gaultier</p>
             <h3 class="nombre">Le Beau Le Parfum Intense</h3>
             <p class="meta">Parfum &middot; 125 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Floral tropical gourmand intenso</span>
+            <p class="descripcion">Versión más intensa de Le Beau, tropical y dulce.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: piña, coco. Corazón: ylang ylang. Fondo: haba tonka, madera, ámbar.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1571,8 +1694,9 @@
             <p class="marca">Jean Paul Gaultier</p>
             <h3 class="nombre">Scandal Le Parfum</h3>
             <p class="meta">EDP &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Fresco especiado dulce intenso</span>
+            <p class="descripcion">Versión más concentrada de Scandal Pour Homme.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: pomelo. Corazón: lavanda, ciruela. Fondo: haba tonka, pachulí, ámbar.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1585,8 +1709,9 @@
             <p class="marca">Loewe</p>
             <h3 class="nombre">7</h3>
             <p class="meta">EDT &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Amaderado especiado cuero</span>
+            <p class="descripcion">Elegante y especiado, con un característico fondo de cuero.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: cardamomo, azafrán. Corazón: violeta. Fondo: cuero, ámbar, cedro.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1599,8 +1724,9 @@
             <p class="marca">Lorenzo Pazzaglia</p>
             <h3 class="nombre">Black Sea</h3>
             <p class="meta">Extrait &middot; 50 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Acuático ambarado</span>
+            <p class="descripcion">Fresco y misterioso, notas marinas sobre un fondo ambarado; nicho italiano.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: notas marinas, especias. Corazón: ámbar. Fondo: madera, almizcle.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1613,8 +1739,9 @@
             <p class="marca">Parfums de Marly</p>
             <h3 class="nombre">Althaïr</h3>
             <p class="meta">EDP &middot; 125 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Aromático especiado dulce</span>
+            <p class="descripcion">Elegante y fresco, con un fondo cálido de vainilla y cuero; nicho francés.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: bergamota, pimienta rosa. Corazón: geranio, vainilla. Fondo: haba tonka, ámbar, cuero.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1627,8 +1754,9 @@
             <p class="marca">Montale</p>
             <h3 class="nombre">Arabians Tonka</h3>
             <p class="meta">EDP &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Oriental gourmand especiado</span>
+            <p class="descripcion">Cálido y dulce, tonka y especias sobre un fondo ambarado.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: especias. Corazón: haba tonka. Fondo: ámbar, vainilla, madera.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1641,8 +1769,9 @@
             <p class="marca">Montale</p>
             <h3 class="nombre">Intense Café</h3>
             <p class="meta">EDP &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Oriental gourmand café</span>
+            <p class="descripcion">Intenso y adictivo, café y cacao sobre un fondo ambarado.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: café. Corazón: cacao, especias. Fondo: vainilla, ámbar, madera.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1655,8 +1784,9 @@
             <p class="marca">Montale</p>
             <h3 class="nombre">Starry Nights</h3>
             <p class="meta">EDP &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Oriental amaderado oud</span>
+            <p class="descripcion">Nocturno y misterioso, oud y azafrán con fondo ambarado.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: azafrán, especias. Corazón: rosa, oud. Fondo: ámbar, madera, vainilla.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1669,8 +1799,9 @@
             <p class="marca">Moschino</p>
             <h3 class="nombre">Toy Boy</h3>
             <p class="meta">EDP &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Floral especiado dulce</span>
+            <p class="descripcion">Original y audaz, floral especiado con un fondo dulce de tonka.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: cardamomo. Corazón: flor de naranjo. Fondo: haba tonka, ámbar, almizcle.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1683,8 +1814,9 @@
             <p class="marca">Paco Rabanne</p>
             <h3 class="nombre">Phantom</h3>
             <p class="meta">EDT &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Aromático fresco tecnológico</span>
+            <p class="descripcion">Fresco e innovador, con una firma aromática limpia y moderna.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: manzana, lavanda. Corazón: notas verdes. Fondo: almizcle, madera, ámbar.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1697,8 +1829,9 @@
             <p class="marca">Versace</p>
             <h3 class="nombre">Eros Energy</h3>
             <p class="meta">EDP &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Aromático fresco intenso</span>
+            <p class="descripcion">Versión energizante de Eros, fresca y vibrante.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: pomelo, jengibre. Corazón: geranio, salvia. Fondo: ámbar, madera, almizcle.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1711,8 +1844,9 @@
             <p class="marca">Versace</p>
             <h3 class="nombre">Eros Flame</h3>
             <p class="meta">EDP &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Aromático especiado dulce</span>
+            <p class="descripcion">Versión más cálida e intensa de Eros, especiada y ambarada.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: pimienta negra, mandarina. Corazón: geranio, lavanda. Fondo: vainilla, ámbar, cachemira.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1731,8 +1865,9 @@
             <p class="marca">Armaf</p>
             <h3 class="nombre">Club de Nuit Intense (Man)</h3>
             <p class="meta">EDT &middot; 105 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Amaderado frutal</span>
+            <p class="descripcion">Fresco y afrutado en salida, con un corazón amaderado y fondo ahumado. El clásico más reconocido de Armaf.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: piña, bergamota, manzana negra. Corazón: abedul, jazmín. Fondo: almizcle, ámbar, roble.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1745,8 +1880,9 @@
             <p class="marca">Bharara</p>
             <h3 class="nombre">King</h3>
             <p class="meta">EDP &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Amaderado especiado</span>
+            <p class="descripcion">Masculino y especiado, con fondo ambarado y de cuero, potente y llamativo.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: bergamota, manzana. Corazón: especias, salvia. Fondo: ámbar, madera, cuero.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1759,8 +1895,9 @@
             <p class="marca">Nitro</p>
             <h3 class="nombre">Black Intense</h3>
             <p class="meta">EDP &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Amaderado especiado intenso</span>
+            <p class="descripcion">Intenso y masculino, especiado con fondo de cuero y madera oscura.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: bergamota, pimienta negra. Corazón: especias, cuero. Fondo: ámbar, madera, almizcle.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1773,8 +1910,9 @@
             <p class="marca">Lattafa</p>
             <h3 class="nombre">Bade'e Al Oud Sublime</h3>
             <p class="meta">EDP &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Oriental amaderado oud</span>
+            <p class="descripcion">Oriental amaderado con oud y azafrán, cálido y de larga duración.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: azafrán, cítricos. Corazón: rosa, oud. Fondo: ámbar, madera, almizcle.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1787,8 +1925,9 @@
             <p class="marca">Lattafa</p>
             <h3 class="nombre">Asad Bourbon</h3>
             <p class="meta">Confirmar &middot; Confirmar</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Oriental amaderado especiado</span>
+            <p class="descripcion">Cálido y especiado con acordes de licor y tabaco, típico de la línea Asad.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: whisky, especias. Corazón: cuero, tabaco. Fondo: ámbar, madera.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1801,8 +1940,9 @@
             <p class="marca">Lattafa</p>
             <h3 class="nombre">Asad Elixir</h3>
             <p class="meta">EDP &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Oriental amaderado especiado</span>
+            <p class="descripcion">Especiado e intenso, con cuero y oud sobre un fondo ambarado.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: canela, especias. Corazón: cuero, oud. Fondo: ámbar, madera, almizcle.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1815,8 +1955,9 @@
             <p class="marca">Lattafa</p>
             <h3 class="nombre">Khamrah</h3>
             <p class="meta">EDP &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Oriental especiado gourmand</span>
+            <p class="descripcion">Cálido y navideño, especias dulces sobre un fondo ambarado y goloso.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: canela, nuez moscada, pimienta. Corazón: dátil, praliné. Fondo: vainilla, ámbar, madera.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1829,8 +1970,9 @@
             <p class="marca">Al Haramain</p>
             <h3 class="nombre">L'Aventure Blanche</h3>
             <p class="meta">EDP &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Oriental floral</span>
+            <p class="descripcion">Cálido y floral con un fondo ambarado, típico estilo Al Haramain.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: cítricos, especias. Corazón: flores blancas. Fondo: almizcle, ámbar, madera.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1843,8 +1985,9 @@
             <p class="marca">Al Haramain</p>
             <h3 class="nombre">L'Aventure</h3>
             <p class="meta">EDP &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Oriental amaderado</span>
+            <p class="descripcion">Oriental amaderado con oud y especias, cálido y potente.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: especias, cítricos. Corazón: oud, rosa. Fondo: ámbar, madera, almizcle.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1857,8 +2000,9 @@
             <p class="marca">Devier</p>
             <h3 class="nombre">Amber Arabian</h3>
             <p class="meta">Extracto &middot; 80 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Oriental ambarado</span>
+            <p class="descripcion">Cálido y ambarado con toques de oud, intenso y de larga duración.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: especias. Corazón: ámbar, oud. Fondo: madera, almizcle.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1871,8 +2015,9 @@
             <p class="marca">Devier</p>
             <h3 class="nombre">Sinfonía 21</h3>
             <p class="meta">Extracto &middot; 80 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Oriental amaderado</span>
+            <p class="descripcion">Perfil oriental amaderado, cálido y envolvente.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: especias, cítricos. Corazón: flores, madera. Fondo: almizcle, ámbar.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1885,8 +2030,9 @@
             <p class="marca">Game Of Spade</p>
             <h3 class="nombre">Bonus</h3>
             <p class="meta">EDP &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Oriental amaderado</span>
+            <p class="descripcion">Perfil oriental especiado, típico de las fragancias árabes de larga duración.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: especias, cítricos. Corazón: flores, oud. Fondo: ámbar, madera.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1899,8 +2045,9 @@
             <p class="marca">Game Of Spade</p>
             <h3 class="nombre">Double Bonus</h3>
             <p class="meta">Parfum &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Oriental amaderado intenso</span>
+            <p class="descripcion">Versión más concentrada e intensa de Bonus.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: especias intensas. Corazón: oud, ámbar. Fondo: madera, almizcle.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1913,8 +2060,9 @@
             <p class="marca">ILMIN</p>
             <h3 class="nombre">Il Azzurro</h3>
             <p class="meta">Extracto &middot; 30 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Acuático fresco</span>
+            <p class="descripcion">Fresco y acuático, extracto concentrado de la línea ILMIN.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: cítricos, notas marinas. Corazón: notas acuáticas. Fondo: almizcle, madera clara.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1927,8 +2075,9 @@
             <p class="marca">ILMIN</p>
             <h3 class="nombre">Il Ego</h3>
             <p class="meta">Extracto &middot; 30 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Amaderado especiado</span>
+            <p class="descripcion">Perfil amaderado especiado, intenso y personal.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: especias. Corazón: cuero, madera. Fondo: ámbar, almizcle.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1941,8 +2090,9 @@
             <p class="marca">ILMIN</p>
             <h3 class="nombre">Il Erotique</h3>
             <p class="meta">Extracto &middot; 30 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Oriental especiado sensual</span>
+            <p class="descripcion">Sensual y cálido, especiado con fondo ambarado.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: especias dulces. Corazón: ámbar, flores. Fondo: almizcle, madera.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1955,8 +2105,9 @@
             <p class="marca">ILMIN</p>
             <h3 class="nombre">Il Femme</h3>
             <p class="meta">Extracto &middot; 30 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Floral dulce</span>
+            <p class="descripcion">Perfil floral dulce pese al nombre, parte de la línea de extractos ILMIN.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: flores, frutas. Corazón: jazmín. Fondo: almizcle, vainilla.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1969,8 +2120,9 @@
             <p class="marca">ILMIN</p>
             <h3 class="nombre">Il Mexico</h3>
             <p class="meta">Extracto &middot; 30 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Amaderado especiado</span>
+            <p class="descripcion">Cálido y especiado, con un fondo amaderado profundo.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: especias, cítricos. Corazón: madera, tabaco. Fondo: ámbar, almizcle.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1983,8 +2135,9 @@
             <p class="marca">ILMIN</p>
             <h3 class="nombre">Il Oomph</h3>
             <p class="meta">Extracto &middot; 30 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Oriental amaderado oud</span>
+            <p class="descripcion">Intenso y masculino, oud y cuero sobre fondo ambarado.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: especias. Corazón: cuero, oud. Fondo: ámbar, madera.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -1997,8 +2150,9 @@
             <p class="marca">Kajal</p>
             <h3 class="nombre">Lamar</h3>
             <p class="meta">EDP &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Oriental amaderado</span>
+            <p class="descripcion">Perfil oriental amaderado, cálido y de buena proyección.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: especias, cítricos. Corazón: flores, madera. Fondo: ámbar, almizcle.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -2011,8 +2165,9 @@
             <p class="marca">Korbaj</p>
             <h3 class="nombre">Musky Signature</h3>
             <p class="meta">Extracto &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Almizclado amaderado</span>
+            <p class="descripcion">Centrado en almizcle, cálido y envolvente, de larga duración.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: especias. Corazón: almizcle. Fondo: madera, ámbar.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -2025,8 +2180,9 @@
             <p class="marca">Korbaj</p>
             <h3 class="nombre">Toxic Desire</h3>
             <p class="meta">Extracto &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Oriental amaderado intenso</span>
+            <p class="descripcion">Intenso y seductor, oud y ámbar sobre fondo amaderado.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: especias dulces. Corazón: oud, ámbar. Fondo: madera, almizcle.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -2039,8 +2195,9 @@
             <p class="marca">Lattafa</p>
             <h3 class="nombre">Al Qiam Gold</h3>
             <p class="meta">EDP &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Oriental amaderado oud</span>
+            <p class="descripcion">Oriental amaderado con oud y azafrán, lujoso y potente.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: azafrán, especias. Corazón: oud, rosa. Fondo: ámbar, madera, almizcle.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -2053,8 +2210,9 @@
             <p class="marca">Lattafa</p>
             <h3 class="nombre">Oud For Glory</h3>
             <p class="meta">EDP &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Oriental amaderado oud</span>
+            <p class="descripcion">Oud clásico árabe, cálido y de gran proyección.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: especias. Corazón: oud, rosa. Fondo: ámbar, madera.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -2067,8 +2225,9 @@
             <p class="marca">Lattafa</p>
             <h3 class="nombre">Asad</h3>
             <p class="meta">EDP &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Oriental amaderado especiado</span>
+            <p class="descripcion">Especiado y amaderado, línea Asad de Lattafa.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: especias, cítricos. Corazón: cuero, oud. Fondo: ámbar, madera.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -2081,8 +2240,9 @@
             <p class="marca">Lattafa</p>
             <h3 class="nombre">Fakhar Silver</h3>
             <p class="meta">EDP &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Aromático amaderado fresco</span>
+            <p class="descripcion">Fresco y amaderado, versión 'plateada' de la línea Fakhar.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: cítricos, especias. Corazón: flores, madera. Fondo: almizcle, ámbar.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -2095,8 +2255,9 @@
             <p class="marca">Mundus</p>
             <h3 class="nombre">Burj Kalifa</h3>
             <p class="meta">Extrait &middot; 50 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Oriental amaderado oud</span>
+            <p class="descripcion">Lujoso y oriental, oud y azafrán inspirado en el icónico rascacielos.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: especias, azafrán. Corazón: oud, rosa. Fondo: ámbar, madera.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -2109,8 +2270,9 @@
             <p class="marca">Orientica</p>
             <h3 class="nombre">Oud Saffron</h3>
             <p class="meta">EDP &middot; 80 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Oriental amaderado oud</span>
+            <p class="descripcion">Oud y azafrán clásico, cálido y de larga duración.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: azafrán. Corazón: oud, rosa. Fondo: ámbar, madera, almizcle.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -2123,8 +2285,9 @@
             <p class="marca">Orientica</p>
             <h3 class="nombre">Royal Amber</h3>
             <p class="meta">EDP &middot; 80 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Oriental ambarado</span>
+            <p class="descripcion">Cálido y envolvente, centrado en ámbar y especias.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: especias. Corazón: ámbar, flores. Fondo: madera, almizcle.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -2146,8 +2309,9 @@
             <p class="marca">Hermès</p>
             <h3 class="nombre">Voyage d'Hermès</h3>
             <p class="meta">Parfum &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Cítrico amaderado unisex</span>
+            <p class="descripcion">Fresco, mineral y elegante, pensado para el viaje; unisex y versátil.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: bergamota, cardamomo. Corazón: notas minerales, rosa. Fondo: almizcle, cedro.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -2160,8 +2324,9 @@
             <p class="marca">Jean Paul Gaultier</p>
             <h3 class="nombre">Le Beau Le Parfum</h3>
             <p class="meta">Parfum &middot; 75 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Floral tropical gourmand</span>
+            <p class="descripcion">Tropical y dulce, coco y piña sobre un fondo de tonka.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: piña, coco. Corazón: ylang ylang. Fondo: haba tonka, madera.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -2174,8 +2339,9 @@
             <p class="marca">Lorenzo Pazzaglia</p>
             <h3 class="nombre">Sun-Gria</h3>
             <p class="meta">Extrait &middot; 50 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Frutal floral fresco</span>
+            <p class="descripcion">Fresco y afrutado, ligero y veraniego; nicho italiano.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: frutas rojas, cítricos. Corazón: flores. Fondo: almizcle, madera clara.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -2188,8 +2354,9 @@
             <p class="marca">Maison Francis Kurkdjian</p>
             <h3 class="nombre">Baccarat Rouge 540</h3>
             <p class="meta">Extracto &middot; 70 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Ambarado floral icónico</span>
+            <p class="descripcion">Uno de los perfumes de nicho más icónicos y reconocibles, ambarado y luminoso.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: azafrán, jazmín. Corazón: ámbar gris. Fondo: madera de cedro, almizcle.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -2208,8 +2375,9 @@
             <p class="marca">Armaf</p>
             <h3 class="nombre">Beach Party</h3>
             <p class="meta">EDP &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Acuático tropical</span>
+            <p class="descripcion">Fresco y veraniego, evoca playas tropicales con cítricos, coco y flores exóticas.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: cítricos, piña. Corazón: flores tropicales, coco. Fondo: almizcle, madera.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -2222,8 +2390,9 @@
             <p class="marca">Armaf</p>
             <h3 class="nombre">Odyssey Bahamas</h3>
             <p class="meta">EDP &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Acuático fresco</span>
+            <p class="descripcion">Fresco y acuático, inspirado en el azul turquesa del Caribe.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: bergamota, notas marinas. Corazón: flores blancas. Fondo: almizcle, ámbar.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -2236,8 +2405,9 @@
             <p class="marca">Armaf</p>
             <h3 class="nombre">Set Odyssey Mandarin Sky (4 pzs)</h3>
             <p class="meta">EDP &middot; Set x4</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Cítrico fresco</span>
+            <p class="descripcion">Set de 4 miniaturas de la línea Odyssey Mandarin Sky, frescas y cítricas.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Cítricos, mandarina, almizcle.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -2250,8 +2420,9 @@
             <p class="marca">Afnan</p>
             <h3 class="nombre">9pm Night Out</h3>
             <p class="meta">EDP &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Oriental especiado dulce</span>
+            <p class="descripcion">Cálido y especiado con manzana y canela sobre un fondo dulce y ambarado.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: manzana, canela. Corazón: rosa, especias. Fondo: vainilla, almizcle, ámbar.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -2264,8 +2435,9 @@
             <p class="marca">Armaf</p>
             <h3 class="nombre">Odyssey Mandarin Sky</h3>
             <p class="meta">- &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Cítrico fresco</span>
+            <p class="descripcion">Fresco y cítrico, dominado por la mandarina sobre un fondo almizclado.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: mandarina, cítricos. Corazón: flores blancas. Fondo: almizcle, madera clara.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -2278,8 +2450,9 @@
             <p class="marca">Lattafa</p>
             <h3 class="nombre">Badee Al Oud Amethyst</h3>
             <p class="meta">EDP &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Floral amaderado oud</span>
+            <p class="descripcion">Floral amaderado con oud, cálido y de larga duración, estilo oriental.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: bergamota, azafrán. Corazón: rosa, oud. Fondo: ámbar, almizcle, madera.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -2292,8 +2465,9 @@
             <p class="marca">Lattafa</p>
             <h3 class="nombre">Pride Shaheen Gold</h3>
             <p class="meta">EDP &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Oriental amaderado</span>
+            <p class="descripcion">Oriental amaderado con azafrán y oud, cálido y especiado.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: azafrán, cítricos. Corazón: rosa, oud. Fondo: ámbar, almizcle.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -2306,8 +2480,9 @@
             <p class="marca">Lattafa</p>
             <h3 class="nombre">Set Badee Al Oud Honor and Glory</h3>
             <p class="meta">EDP &middot; Set</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Oriental amaderado oud</span>
+            <p class="descripcion">Set con acordes orientales de oud y ámbar, intensos y de larga duración.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Azafrán, oud, ámbar, almizcle.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -2320,8 +2495,9 @@
             <p class="marca">ILMIN</p>
             <h3 class="nombre">Il Orgasme</h3>
             <p class="meta">Extracto &middot; 30 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Oriental ambarado sensual</span>
+            <p class="descripcion">Sensual y envolvente, especiado con fondo ambarado.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: especias dulces. Corazón: flores, ámbar. Fondo: almizcle, madera.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -2334,8 +2510,9 @@
             <p class="marca">Kajal</p>
             <h3 class="nombre">Almaz</h3>
             <p class="meta">EDP &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Oriental amaderado</span>
+            <p class="descripcion">Perfil oriental amaderado, cálido y unisex.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: especias, cítricos. Corazón: flores, oud. Fondo: ámbar, madera.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -2348,8 +2525,9 @@
             <p class="marca">Lattafa</p>
             <h3 class="nombre">Art of Universe</h3>
             <p class="meta">EDP &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Oriental amaderado oud</span>
+            <p class="descripcion">Oriental amaderado, cálido y de gran proyección.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: azafrán, cítricos. Corazón: rosa, oud. Fondo: ámbar, madera, almizcle.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -2362,8 +2540,9 @@
             <p class="marca">Lattafa</p>
             <h3 class="nombre">Shaheen Gold</h3>
             <p class="meta">EDP &middot; 100 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Oriental amaderado</span>
+            <p class="descripcion">Similar a la línea Pride Shaheen Gold ya existente; confirmar si es el mismo producto.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: azafrán, cítricos. Corazón: rosa, oud. Fondo: ámbar, almizcle.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -2376,8 +2555,9 @@
             <p class="marca">Mundus</p>
             <h3 class="nombre">Chichén Itzá</h3>
             <p class="meta">Extrait &middot; 50 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Oriental amaderado</span>
+            <p class="descripcion">Cálido y místico, inspirado en la cultura maya.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: especias. Corazón: madera, ámbar. Fondo: almizcle, oud.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -2390,8 +2570,9 @@
             <p class="marca">Orientica</p>
             <h3 class="nombre">Royal Bleu</h3>
             <p class="meta">EDP &middot; 80 ML</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Acuático ambarado</span>
+            <p class="descripcion">Fresco y ambarado, versátil y de larga duración.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Salida: cítricos, especias. Corazón: notas acuáticas. Fondo: ámbar, madera, almizcle.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
@@ -2404,8 +2585,9 @@
             <p class="marca">Orientica</p>
             <h3 class="nombre">Set Mini (x5)</h3>
             <p class="meta">- &middot; Set x5</p>
-            <div class="placeholder desc">Descripción aquí</div>
-            <div class="placeholder notas">Notas olfativas: salida / corazón / fondo</div>
+            <span class="chip-caracteristicas">Variado</span>
+            <p class="descripcion">Set de 5 miniaturas de la línea Orientica para descubrir distintos perfiles.</p>
+            <p class="notas-reales"><strong>Notas:</strong> Variado según la fragancia.</p>
             <div class="precio-box">Precio</div>
           </div>
         </article>
